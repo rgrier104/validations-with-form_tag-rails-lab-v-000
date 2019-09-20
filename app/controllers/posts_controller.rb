@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.assign_attributes(post_params)
-    if @updated_post.valid?
+    if @post.valid?
       @post.update(post_params)
 
       redirect_to post_path(@post)
