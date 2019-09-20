@@ -9,8 +9,9 @@ class PostsController < ApplicationController
 
   def update
     @updated_post = Post.new(post_params)
-    if @updated_post.valid?
       @post = Post.find(params[:id])
+    if @updated_post.valid?
+
 
       @post.update(post_params)
 
